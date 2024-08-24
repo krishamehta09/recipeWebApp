@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"/>
+
+  <title>Food Recipe App</title>
+</head>
+
+<body style= "background-color:rgba(88, 41, 199, 0.1) !important;">
+  <!-- <nav class="navbar">
+    <div class="logo">
+        <a href="index.html">RecipeApp</a> 
+    </div>
+    <button class="toggle-button">&#9776;</button>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">CustomRecipes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav> -->
+  
+  <div id="root"></div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          fetch('http://127.0.0.1:8000/api/recipes/')
+              .then(response => {
+                  if (!response.ok) {
+                      throw new Error('Network response was not ok');
+                  }
+                  return response.json();
+              })
+              .then(data => {
+                  console.log(data); // Log the data for debugging
+                   // Function to display the recipes in the UI
+              })
+              .catch(error => {
+                  console.error('There was a problem with the fetch operation:', error);
+              });
+      });
+      
+      // function displayRecipes(recipes) {
+      //     const recipesContainer = document.getElementById('recipes-container');
+      //     recipesContainer.innerHTML = ''; // Clear any existing content
+
+      //     recipes.forEach(recipe => {
+      //         const recipeElement = document.createElement('div');
+      //         recipeElement.classList.add('recipe');
+
+      //         recipeElement.innerHTML = `
+      //             <h2>${recipe.title}</h2>
+      //             <p><strong>Ingredients:</strong> ${recipe.ingredients}</p>
+      //             <p><strong>Instructions:</strong> ${recipe.instructions}</p>
+      //         `;
+
+      //         recipesContainer.appendChild(recipeElement);
+      //     });
+      // }
+  </script>
+</body>
+
+</html>
