@@ -25,23 +25,23 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 500px; /* Set a consistent width */
-    height: auto; /* Set a consistent height */
+    width: 500px; 
+    height: auto; 
     padding: 15px;
     text-align: center;
     border: 1px solid #ddd;
     display: flex;
-    flex-direction: column; /* Stack content vertically */
-    justify-content: space-between; /* Distribute space between content */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    flex-direction: column; 
+    justify-content: space-between; 
+    box-sizing: border-box; 
 }
 
 /* Image styles */
 .recipe img {
-    width: 100%; /* Full width of the container */
-    max-height: 200px; /* Restrict the image height */
-    object-fit: cover; /* Ensure the image fits within the space */
-    margin-bottom: 10px; /* Space below the image */
+    width: 100%; 
+    max-height: 200px; 
+    object-fit: cover; 
+    margin-bottom: 10px; 
 }
 
 /* Heading styles */
@@ -138,15 +138,15 @@
 
 /* Modal Styles */
 .modal {
-    display: none; /* Hidden by default */
+    display: none; 
     position: fixed;
-    z-index: 1000; /* Sit on top */
+    z-index: 1000; 
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.5); 
 }
 
 /* Modal Content */
@@ -180,20 +180,20 @@
 .heading {
     color: #5829c7;
     margin-bottom: 20px;
-    font-size: 48px; /* Larger heading */
-    font-weight: bold; /* Make the heading bold */
-    text-align: center; /* Center the heading */
+    font-size: 48px; 
+    font-weight: bold; 
+    text-align: center; 
 }
 
 .recipe .delete-button {
     padding: 8px 12px;
     border: none;
     border-radius: 4px;
-    background-color: #dc3545; /* Red color for delete button */
+    background-color: #dc3545; 
     color: #fff;
     cursor: pointer;
     font-size: 14px;
-    margin-top: 10px; /* Space from other content */
+    margin-top: 10px; 
 }
 .recipe .delete-button:hover {
     background-color: #c82333;
