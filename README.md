@@ -52,6 +52,7 @@ These instructions will get you a copy of the project up and running on your loc
 ## Usage
 
 After starting both the frontend and backend, visit `http://localhost:3000` in your browser to start using the application.
+To view and enter the recipe details from the backend, you can visit 'http://127.0.0.1:8000/api/recipes'.
 
 ## Contributing
 
